@@ -18,10 +18,10 @@
   <div class="planet-wrapper">
     <div class="planet-container" *ngFor="let planet of planets">
       <h2>{{ planet.name }}</h2>
-      <p>Climate: {{ planet.climate }}</p>
-      <p>Population: {{ planet.population }}</p>
-      <p>Terrain: {{ planet.terrain }}</p>
-      <h3 *ngIf="planet?.residents?.length">Residents:</h3>
+      <p>Climate : {{ planet.climate }}</p>
+      <p>Population : {{ planet.population }}</p>
+      <p>Terrain : {{ planet.terrain }}</p>
+      <h3 *ngIf="planet?.residents?.length">Residents :</h3>
       <ul>
         <li *ngFor="let resident of planet?.residents">
           <strong>Name:</strong> {{ resident.name }}<br />
