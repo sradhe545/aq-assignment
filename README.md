@@ -1,6 +1,6 @@
 # Aquera Assignment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version v19.8.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version v15.2.0.
 
 ## Local Setup
 
