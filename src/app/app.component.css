@@ -1,0 +1,109 @@
+.container h1{
+    text-align: center;
+    margin-bottom: 30px;
+ }
+ .planet-wrapper{
+     display: grid;
+     grid-template-columns: repeat(3,1fr); 
+     gap: 40px;
+     width: 85%;
+     margin: auto;
+ }
+ .planet-container {
+     border-radius: 10px;
+     padding: 20px;
+     margin-bottom: 20px;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     
+   }
+   
+   .planet-container h2 {
+     margin-top: 0;
+     font-size: 24px;
+     color: #333;
+   }
+   
+   .planet-container p {
+     margin: 5px 0;
+     color: black;
+     font-size: 22px;
+   }
+   
+   .planet-container h3 {
+     margin: 10px 0;
+     font-size: 22px;
+     color: #555;
+   }
+   
+   .planet-container ul {
+     list-style-type: none;
+     padding: 0;
+   }
+   
+   .planet-container li {
+     margin-bottom: 10px;
+     border-left: 4px solid #007bff;
+     padding-left: 10px;
+   }
+   
+   .planet-container li p {
+     margin: 0;
+     font-weight: bold;
+   }
+   
+   @media screen and (max-width: 1000px) {
+     .planet-wrapper{
+         grid-template-columns: repeat(2,1fr); 
+     }
+   }
+   @media screen and (max-width: 500px) {
+     .planet-wrapper{
+         display: grid;
+         grid-template-columns: repeat(1,1fr); 
+     }
+ }
+   .loader-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+   }
+ 
+   .loader {
+     width: 50px;
+     height: 50px;
+     border: 4px solid rgba(0, 0, 0, 0.1);
+     border-left-color:#007bff;
+    border-radius: 50%;
+     animation: spin 1s linear infinite;
+   }
+ 
+   @keyframes spin {
+     0% {
+       transform: rotate(0deg);
+     }
+     100% {
+       transform: rotate(360deg);
+     }
+   }
+   
+   .pagination {
+     text-align: center;
+     margin-top: 20px;
+   }
+   
+   button {
+     background-color: #007bff;
+     color: #fff;
+     border: none;
+     padding: 10px 20px;
+     font-size: 18px;
+     margin: 5px;
+     cursor: pointer;
+     border-radius: 5px;
+   }
+   button:disabled {
+     background-color:grey;
+     cursor: not-allowed;
+   }
+   

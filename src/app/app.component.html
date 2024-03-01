@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Planet Data</h1>
+
+  <div class="loader-container" *ngIf="!isLoading; else displayCard">
+    <div class="loader"></div>
+  </div>
+  <div class="pagination">
+    <button [disabled]="!prev" (click)="getPlanetsData(prev)">
+      Previous
+    </button>
+    <button [disabled]="!next" (click)="getPlanetsData(next)">
+      Next
+    </button>
+  </div>
+</div>
+
+<ng-template #displayCard>
+  <div class="planet-wrapper">
+    <div class="planet-container" *ngFor="let planet of planets">
+      <h2>{{ planet.name }}</h2>
+      <p>Climate: {{ planet.climate }}</p>
+      <p>Population: {{ planet.population }}</p>
+      <p>Terrain: {{ planet.terrain }}</p>
+      <h3 *ngIf="planet?.residents?.length">Residents:</h3>
+      <ul>
+        <li *ngFor="let resident of planet?.residents">
+          <strong>Name:</strong> {{ resident.name }}<br />
+          <strong>Height:</strong> {{ resident.height }} cm<br />
+          <strong>Mass:</strong> {{ resident.mass }} kg<br />
+          <strong>Gender:</strong> {{ resident.gender | titlecase }}<br />
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  
+</ng-template>
